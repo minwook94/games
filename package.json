@@ -1,0 +1,1 @@
+{"name":"bossfall","version":"0.1.0","private":true,"type":"module","scripts":{"start":"node server.js","test":"node --test","check":"node --check server.js && node --check public/engine.js && node --check public/app.js"},"dependencies":{"ws":"8.18.3"},"engines":{"node":">=22"}}
