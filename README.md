@@ -31,8 +31,10 @@ npm start
 
 `.github/workflows/pages.yml`은 main 푸시 시 테스트 후 `public/`을 GitHub Pages에 배포합니다. 저장소의 Pages 소스를 GitHub Actions로 활성화해야 합니다. Pages는 솔로와 같은 기기 2인용 정적 클라이언트를 제공합니다.
 
+Pages를 main 브랜치 루트로 설정한 경우에도 루트 진입 페이지가 `public/` 게임으로 안내합니다. 두 배포 방식 모두 지원합니다.
+
 온라인 파티는 WebSocket을 지원하는 Node 서비스가 필요합니다. `render.yaml`을 Render Blueprint로 연결하거나 Dockerfile로 서버를 배포합니다. 서버가 클라이언트 파일까지 제공하므로 해당 서비스 주소에서 바로 온라인 플레이가 가능합니다. Pages에서 온라인을 이용하면 로비의 서버 주소에 해당 서비스의 `wss://` 주소를 입력합니다. HTTPS 페이지에서는 `wss://`를 사용하세요. 무료 호스팅의 절전으로 첫 연결이 지연될 수 있습니다.
 
 ## 패치노트와 참고 자료
 
-패치노트 데이터는 `public/patches.json`에서 관리합니다. 참고 요청된 기존 게임은 https://last-signal.naitoria.chatgpt.site/ 입니다. 구현 시 환경의 네트워크 정책이 해당 사이트 접근을 차단하여 기존 UI·데이터는 아직 반영하지 못했습니다. 접근이 가능해지면 기존 형식과 데이터 구조를 확인하고 적용할 수 있습니다.
+패치노트 데이터는 `public/patches.json`에서 관리합니다. 참고 요청된 기존 게임은 https://last-signal.naitoria.chatgpt.site/ 입니다. 업데이트 보관소의 버전·한국 시각 표기, 접을 수 있는 변경 내역, 최신 버전 알림 및 다시 보지 않기, 로비 개인 최고 기록 구성을 참고했습니다. 기존 게임의 계정·성장 데이터나 랭킹을 가져오지는 않습니다.
